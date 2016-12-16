@@ -93,7 +93,7 @@ if [ $choice == 'yes' ]; then
     sed -ie "s/\$rootScope\.tokenUrl = '';/\$rootScope\.fundUrl = 'm360-php\/scripts\/checkFunds\.php';/g" ./../../src/js/verto.module.js
     sed -ie "s/\$rootScope\.tokenUrl = '';/\$rootScope\.numberUrl = 'm360-php\/scripts\/authenticateNumber\.php';/g" ./../../src/js/verto.module.js
     # TEMPORARY: CHANGE CONFIG ENVIRONMENT TO DEVELOPMENT #
-    sed -ie 's/public static \$environment = Environments::PRODUCTION/public static \$environment = Environments::DEVELOPMENT/g' ./../src/Configuration.php
+    sed -ie 's/public static \$environment = Environments::PRODUCTION/public static \$environment = Environments::PREPRODUCTION/g' ./../src/Configuration.php
     cd ../../;
     command -v node >/dev/null && echo "Node.js is already installed, checking for updates.." && npm install npm@latest -g || { 
         echo -n 'Node.js was not found and is required, do you want to install? [yes/no]: '
