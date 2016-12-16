@@ -61,7 +61,7 @@ if [ $choice == 'yes' ]; then
     \$wrtc = \$client->getWebRTC();
     \$collect['accountSid'] = '$account_sid';
     \$collect['authToken'] = '$auth_token';
-    \$result = \$wrtc->getToken(\$collect);
+    \$result = \$wrtc->createToken(\$collect);
     echo json_encode(\$result);" >> accessToken.php
     # PHP code for checkFunds.php #
     echo "
