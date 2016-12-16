@@ -57,7 +57,6 @@ if [ $choice == 'yes' ]; then
     echo "
     <?php
     require_once '../vendor/autoload.php';
-    require_once '../'
     \$client = new Message360Lib\Message360Client('$account_sid','$auth_token');
     \$wrtc = \$client->getWebRTC();
     \$collect['accountSid'] = '$account_sid';
