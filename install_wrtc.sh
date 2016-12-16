@@ -90,8 +90,8 @@ if [ $choice == 'yes' ]; then
     echo json_encode(\$result);" >> authenticateNumber.php
     # ADD PHP URL'S TO APP SOURCE CODE #
     sed -ie "s/\$rootScope\.tokenUrl = '';/\$rootScope\.tokenUrl = 'm360-php\/scripts\/accessToken\.php';/g" ./../../src/js/verto.module.js
-    sed -ie "s/\$rootScope\.tokenUrl = '';/\$rootScope\.fundUrl = 'm360-php\/scripts\/checkFunds\.php';/g" ./../../src/js/verto.module.js
-    sed -ie "s/\$rootScope\.tokenUrl = '';/\$rootScope\.numberUrl = 'm360-php\/scripts\/authenticateNumber\.php';/g" ./../../src/js/verto.module.js
+    sed -ie "s/\$rootScope\.fundUrl = '';/\$rootScope\.fundUrl = 'm360-php\/scripts\/checkFunds\.php';/g" ./../../src/js/verto.module.js
+    sed -ie "s/\$rootScope\.numberUrl = '';/\$rootScope\.numberUrl = 'm360-php\/scripts\/authenticateNumber\.php';/g" ./../../src/js/verto.module.js
     # TEMPORARY: CHANGE CONFIG ENVIRONMENT TO DEVELOPMENT #
     sed -ie 's/public static \$environment = Environments::PRODUCTION/public static \$environment = Environments::PREPRODUCTION/g' ./../src/Configuration.php
     cd ../../;
